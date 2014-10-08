@@ -17,3 +17,8 @@ clean:
 	
 %.o : %.c
 	$(CC) $(CFLAGS) -c $<
+
+.PHONY: clean all fmt
+	
+fmt:
+	astyle *.c -nQ
